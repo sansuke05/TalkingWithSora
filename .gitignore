@@ -172,6 +172,7 @@ venv.bak/
 samples/*.json
 samples/google-cloud-python/
 samples/*.text
+samples/python-docs-samples/
 account_key/
 
 # End of https://www.gitignore.io/api/python,pycharm
