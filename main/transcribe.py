@@ -22,6 +22,7 @@ def transribe_file(speech_file):
         encoding=enums.RecognitionConfig.AudioEncoding.LINEAR16,
         language_code='ja-JP')
 
+
     # 短い音声の場合recognize()メソッドを使用
     # 長い音声の場合はlong_running_recognize()メソッドも用意されている
     operation = client.recognize(config, audio) 
@@ -31,7 +32,8 @@ def transribe_file(speech_file):
 
     d = datetime.datetime.today()
     today = d.strftime("%Y%m%d-%H%M%S")
-    fout = codecs.open('output{}.text'.format(today), 'a', 'utf-8')
+    path = 'generatedText/output{}.txt'.format(today)
+    fout = codecs.open(path, 'a', 'utf-8')
 
     for alternative in result.alternatives:
         fout.write(u'{}\n'.format(alternative.transcript))

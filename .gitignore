@@ -166,6 +166,20 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+### venv ###
+# Linux
+bin/ 
+lib/
+include/
+
+# Window
+Include/
+Lib/
+Scripts/
+
+# Shared
+pyvenv.cfg
+
 ### others ###
 
 # test files
@@ -174,5 +188,6 @@ samples/google-cloud-python/
 samples/*.text
 samples/python-docs-samples/
 account_key/
+config/*.json
 
 # End of https://www.gitignore.io/api/python,pycharm
