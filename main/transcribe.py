@@ -40,6 +40,8 @@ def transribe_file(speech_file):
     fout.close()
 
 if __name__ == '__main__':
+    
+
     parser = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
