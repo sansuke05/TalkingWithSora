@@ -2,6 +2,7 @@
 # coding: utf-8
 import argparse
 import io
+import os
 import sys
 import codecs
 import datetime
@@ -40,7 +41,8 @@ def transribe_file(speech_file):
     fout.close()
 
 if __name__ == '__main__':
-    
+    path = '../config/TalkWithCharaProject-6df0a95a6e30.json'
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path
 
     parser = argparse.ArgumentParser(
         description=__doc__,

@@ -7,14 +7,20 @@ def main():
     print('Welcome to communication system with Sora')
     print('Version: 0.0.1\nCreated by sansuke05')
     print('-------------------------------------------')
-    print('Starting App...')
+    print('Starting App...\n')
 
     # init
     # 環境変数設定
 
-    # 音声認識開始処理
-    # 録音処理
-    # 音声認識
+    while True:
+        # 音声認識開始処理
+        # 録音処理
+        # 音声認識
+
+        # 終了条件
+        if input() == 'exit':
+            print('Exiting app...')
+            break
 # [END main]
 
 
