@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
 import os
+import recording_voice
+import transcribe
+import responder
+
+ENV_PATH = '../config/TalkWithCharaProject-6df0a95a6e30.json'
+
 
 def main():
     print('-------------------------------------------')
@@ -11,14 +17,28 @@ def main():
 
     # init
     # 環境変数設定
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ENV_PATH
 
     while True:
+        print('> ', end='')
+        command = input()
         # 音声認識開始処理
-        # 録音処理
-        # 音声認識
+        if command == 'start':
+            # 録音処理
+            recording_voice.record()
+            # 音声認識
+            transcribe.transribe_file()
+            # 応答
+            f = open('./generatedText/tmp.txt')
+            input_text = f.readline().replace('\n','')
+            f.close()
 
+            response_text = responder.pattern_response(input_text)
+            print(response_text)
+            # 発話
+        
         # 終了条件
-        if input() == 'exit':
+        if command == 'exit':
             print('Exiting app...')
             break
 # [END main]

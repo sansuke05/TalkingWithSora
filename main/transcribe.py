@@ -8,7 +8,15 @@ import codecs
 import datetime
 import locale
 
-def transribe_file(speech_file):
+# file setting
+INPUT_FILE_PATH = 'recordedVoice/tmp.wav'
+OUT_FILE_PATH = 'generatedText/tmp.txt'
+#d = datetime.datetime.today()
+#today = d.strftime("%Y%m%d-%H%M%S")
+#OUT_FILE_PATH = 'generatedText/output{}.txt'.format(today)
+
+
+def transribe_file(speech_file = INPUT_FILE_PATH):
     from google.cloud import speech
     from google.cloud.speech import enums
     from google.cloud.speech import types
@@ -31,10 +39,7 @@ def transribe_file(speech_file):
     print('Waiting for operation to complete...')
     result = operation.results[0]
 
-    d = datetime.datetime.today()
-    today = d.strftime("%Y%m%d-%H%M%S")
-    path = 'generatedText/output{}.txt'.format(today)
-    fout = codecs.open(path, 'a', 'utf-8')
+    fout = codecs.open(OUT_FILE_PATH, 'w', 'utf-8')
 
     for alternative in result.alternatives:
         fout.write(u'{}\n'.format(alternative.transcript))
@@ -44,10 +49,11 @@ if __name__ == '__main__':
     path = '../config/TalkWithCharaProject-6df0a95a6e30.json'
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path
 
-    parser = argparse.ArgumentParser(
-        description=__doc__,
-        formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument(
-        'path', help='file path for audio file to be recognized')
-    args = parser.parse_args()
-    transribe_file(args.path)
+    #parser = argparse.ArgumentParser(
+    #    description=__doc__,
+    #    formatter_class=argparse.RawDescriptionHelpFormatter)
+    #parser.add_argument(
+    #    'path', help='file path for audio file to be recognized')
+    #args = parser.parse_args()
+    #transribe_file(args.path)
+    transribe_file()
