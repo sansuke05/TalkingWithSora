@@ -190,4 +190,8 @@ samples/python-docs-samples/
 account_key/
 config/*.json
 
+# sora voice files
+main/sora_voices/*.mp3
+main/sora_voices/*.wav
+
 # End of https://www.gitignore.io/api/python,pycharm

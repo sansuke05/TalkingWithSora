@@ -4,6 +4,7 @@ import os
 import recording_voice
 import transcribe
 import responder
+import speaker
 
 ENV_PATH = '../config/TalkWithCharaProject-6df0a95a6e30.json'
 
@@ -36,6 +37,7 @@ def main():
             response_text = responder.pattern_response(input_text)
             print(response_text)
             # 発話
+            speaker.talk(response_text)
         
         # 終了条件
         if command == 'exit':

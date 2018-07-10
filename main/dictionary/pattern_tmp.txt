@@ -1,0 +1,10 @@
+おはよう:ohayou
+おやすみ:oyasumi1,oyasumi2
+安心する:ansin
+楽しい:fun
+行ってきます|いってきます:ittera
+かわいい|可愛い:kawaii
+好き|すき:love
+ただいま|疲れた:otukare
+悲しい|かなしい|辛い|つらい|死にたい|もうやだ:sinpai
+ありがとう:thankYou
