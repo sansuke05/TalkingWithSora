@@ -9,7 +9,7 @@ OUT_FILE_PATH = 'recordedVoice/tmp.wav'
 # Audio recording parameters
 FORMAT = pyaudio.paInt16
 RATE = 16000
-CHUNK = 1024 * 2
+CHUNK = 1024*3
 RECORD_SECONDS = 5
 
 def record():
