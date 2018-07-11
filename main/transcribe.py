@@ -9,7 +9,7 @@ import datetime
 import locale
 
 # file setting
-INPUT_FILE_PATH = 'recordedVoice/tmp.wav'
+INPUT_FILE_PATH = 'recordedVoice/tmp_converted.wav'
 OUT_FILE_PATH = 'generatedText/tmp.txt'
 #d = datetime.datetime.today()
 #today = d.strftime("%Y%m%d-%H%M%S")
