@@ -9,10 +9,14 @@ import speaker
 ENV_PATH = '../config/TalkWithCharaProject-6df0a95a6e30.json'
 
 
+class CommandExecutionFailed(Exception):
+    def __str__(self):
+        return 'soxコマンドの実行に失敗しました'
+
 def main():
     print('-------------------------------------------')
     print('Welcome to communication system with Sora')
-    print('Version: 0.0.1\nCreated by sansuke05')
+    print('Version: 0.1.0\nCreated by sansuke05')
     print('-------------------------------------------')
     print('Starting App...\n')
 
@@ -27,6 +31,10 @@ def main():
         if command == 'start':
             # 録音処理
             recording_voice.record()
+            # サンプリングレートの変換
+            command = 'sox recordedVoice/tmp.wav -r 16k recordedVoice/tmp_converted.wav'
+            if(os.system(command) != 0):
+                raise CommandExecutionFailed()
             # 音声認識
             transcribe.transribe_file()
             # 応答
