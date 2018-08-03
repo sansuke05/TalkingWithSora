@@ -55,7 +55,7 @@ if __name__ == '__main__':
     gpio.setUp()
     gpio.start_thread('wait')
 
-    for i in range(5)):
+    for i in range(5):
         print('---------main----------')
         time.sleep(1)
     
