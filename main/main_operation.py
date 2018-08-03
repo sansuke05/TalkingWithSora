@@ -29,6 +29,7 @@ def main():
 
     # LED制御スレッドの生成
     gpio = GPIOOperation()
+    gpio.setUp()
     gpio.start_thread('wait')
 
     while True:
