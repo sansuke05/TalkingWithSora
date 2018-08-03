@@ -55,14 +55,14 @@ if __name__ == '__main__':
     gpio.setUp()
     gpio.start_thread('wait')
 
-    for i in range(3):
+    for i in range(5)):
         print('---------main----------')
         time.sleep(1)
     
     gpio.stop()
     gpio.light_on()
 
-    for i in range(3):
+    for i in range(5):
         print('---------main----------')
         time.sleep(1)
     
@@ -70,14 +70,14 @@ if __name__ == '__main__':
     gpio = GPIOOperation()
     gpio.start_thread('recognition')
     
-    for i in range(3):
+    for i in range(5):
         print('---------main----------')
         time.sleep(1)
     
     gpio.stop()
     gpio.light_on()
 
-    for i in range(3):
+    for i in range(5):
         print('---------main----------')
         time.sleep(1)
     
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     gpio = GPIOOperation()
     gpio.start_thread('wait')
 
-    for i in range(3):
+    for i in range(5):
         print('---------main----------')
         time.sleep(1)
     
