@@ -52,6 +52,7 @@ class GPIOOperation():
 # テストコード
 if __name__ == '__main__':
     gpio = GPIOOperation()
+    gpio.setUp()
     gpio.start_thread('wait')
 
     for i in range(3):
