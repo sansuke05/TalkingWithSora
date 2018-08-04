@@ -18,7 +18,7 @@ def random_response():
 
 
 def pattern_response(text):
-    f = open('./dictionary/pattern_tmp.txt')
+    f = open('./dictionary/pattern.txt')
     
     buffar = f.readlines()
     f.close()
