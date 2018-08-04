@@ -19,7 +19,7 @@ class CommandExecutionFailed(Exception):
 def main():
     print('-------------------------------------------')
     print('Welcome to communication system with Sora')
-    print('Version: 0.1.0\nCreated by sansuke05')
+    print('Version: 0.2.0\nCreated by sansuke05')
     print('-------------------------------------------')
     print('Starting App...\n')
 
